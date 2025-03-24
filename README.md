@@ -3,6 +3,8 @@
 ## 📌 Introduction
 AI-Powered Code Reviewer is a web-based application that analyzes your code, provides insights, and suggests improvements using AI. It helps developers enhance code quality, detect issues, and follow best coding practices.
 
+🔗 **Live Demo**: [Visit the Website](https://code-reviewer.vercel.app/)
+
 ## 🚀 Features
 - 📑 **Code Analysis**: Detects syntax errors, best practices, and optimization techniques.
 - 💡 **Suggestions for Improvement**: Provides AI-generated recommendations to enhance code readability and efficiency.
@@ -11,21 +13,20 @@ AI-Powered Code Reviewer is a web-based application that analyzes your code, pro
 - 📤 **Upload & Review**: Allows users to upload code files for instant feedback.
 
 ## 💻 Let's have a look
-![image](https://github.com/user-attachments/assets/aa8c40ee-0c6e-4a0b-b946-b67fed2577a5)
-
+![Screenshot 2025-03-24 204245](https://github.com/user-attachments/assets/3dd9ef31-ce03-4ea5-beef-5f476bf70e96)
 
 ## 🏗️ Tech Stack
 ### **Frontend:**
-- React.js
-- Tailwind CSS
-- Vite
+- [React.js](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
 
 ### **Backend:**
-- Node.js
-- Express.js
+- [Node.js](https://nodejs.org/)
+- [Express.js](https://expressjs.com/)
 
 ### **AI & Processing:**
-- Google Gemini AI Model
+- [Google Gemini AI Model](https://deepmind.google/technologies/gemini/)
 - Code Parsing & Linting Libraries
 
 ## 🛠️ Installation & Setup
@@ -57,13 +58,14 @@ npm run dev
 
 ## 👥 Contributors
 - **[Abhijit Das](https://github.com/dasabhijit2004)** (Backend Expert)
-- Team Contributions Welcome! Feel free to fork and improve the project.
+- Contributions Welcome! Fork the repository and submit a pull request.
 
 ## 🔗 License
-This project is **open-source** under the MIT License.
+This project is **open-source** under the [MIT License](https://github.com/dasabhijit2004/code-reviewer/blob/main/LICENSE).
 
 ## 📩 Contact
-For queries, reach out via [GitHub Issues](https://github.com/dasabhijit2004/code-reviewer/issues) or email at `sadabhijit2004@gmail.com`.
+For queries, reach out via [GitHub Issues](https://github.com/dasabhijit2004/code-reviewer/issues) or email at [sadabhijit2004@gmail.com](mailto:sadabhijit2004@gmail.com).
 
 ---
 🚀 Happy Coding & Code Reviewing! 🎯
+
