@@ -17,7 +17,7 @@ function sum() {
     const [review, setReview] = useState(``)
     
     async function reviewCode(){
-      const response = await axios.post('https://code-reviewer-3ays.onrender.com', {code})
+      const response = await axios.post('https://code-reviewer-3ays.onrender.com/ai/get-review', {code})
       setReview(response.data)
     }
     
