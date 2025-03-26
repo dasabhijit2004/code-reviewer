@@ -7,22 +7,30 @@ import Markdown from 'react-markdown';
 import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/github-dark.css";
 
-
 function App() {
-  const [code, setCode] = useState(`/*Enter Your Core Here...*/
+  const [code, setCode] = useState(`/*Enter Your Code Here...*/
 function sum() {
   return 1 + 1;
 }`);
+  const [review, setReview] = useState(``);
+  const [isReviewing, setIsReviewing] = useState(false); // State for "Reviewing..." message
 
-    const [review, setReview] = useState(``)
-    
-    async function reviewCode(){
-      const response = await axios.post('https://code-reviewer-3ays.onrender.com/ai/get-review', {code})
-      setReview(response.data)
+  async function reviewCode() {
+    setIsReviewing(true); // Show "Reviewing..." message
+    setReview(""); // Clear previous review
+
+    try {
+      const response = await axios.post('https://code-reviewer-3ays.onrender.com/ai/get-review', { code });
+      setReview(response.data);
+    } catch (error) {
+      setReview("❌ Error fetching review. Please try again.");
+    } finally {
+      setIsReviewing(false);
     }
-    
-    return (
-      <>
+  }
+
+  return (
+    <>
       <main>
         <div className="left">
           <div className="code">
@@ -41,14 +49,17 @@ function sum() {
                 height: "100%",
                 width: "100%",
                 color: "#fff",
+                overflow: "auto"
               }}
             />
           </div>
-          <div className="review" onClick={reviewCode}>Review</div>
+          <div className="review" onClick={reviewCode}>
+            {isReviewing ? "Reviewing..." : "Review"}
+          </div>
         </div>
-        <div className="right">{
-          <Markdown rehypePlugins={[ rehypeHighlight ]}>{review}</Markdown>
-        }</div>
+        <div className="right">
+          <Markdown rehypePlugins={[rehypeHighlight]}>{review}</Markdown>
+        </div>
       </main>
     </>
   );

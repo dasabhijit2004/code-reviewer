@@ -11,6 +11,9 @@ body,
     width: 100%;
     font-family: 'poppins', sans-serif;
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 main{
@@ -19,30 +22,37 @@ main{
   padding: 1.5rem;
   display: flex;
   gap: 1rem;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  main {
+    flex-direction: row;
+  }
 }
 
 main .left, main .right{
-  height: 100%;
-  flex-basis: 50%;
+  flex: 1;
   border-radius: 5px;
+  overflow: auto;
 }
 
 main .left{
   background-color: black;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
-main .left .code, main .left .code pre, main .left .code pre .code{
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  border-radius: 0.7rem;
+main .left .code {
+  flex-grow: 1;
+  overflow: auto;
+  border-radius: 5px;
+  padding-bottom: 1rem;
 }
 
 main .left .review{
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
+  position: relative;
   background-color: rgb(182, 106, 244);
   color: rgb(0, 0, 0);
   padding: 0.5rem 1.2rem;
@@ -51,6 +61,13 @@ main .left .review{
   user-select: none;
   cursor: pointer;
   border-radius: 0.5rem;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+main .left .review:hover{
+  background-color: rgb(150, 36, 244);
+  color: white;
 }
 
 main .right{
