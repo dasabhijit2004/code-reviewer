@@ -44,12 +44,14 @@ function sum() {
               style={{
                 fontFamily: '"Fira Code", monospace',
                 fontSize: 16,
-                border: "2px solid #ddd",
                 borderRadius: "5px",
-                height: "100%",
+                minHeight: "600px",
                 width: "100%",
                 color: "#fff",
-                overflow: "auto"
+                overflowY: "auto",
+                overflowX: "hidden",
+                whiteSpace: "pre-wrap", 
+                wordWrap: "break-word",
               }}
             />
           </div>
